@@ -7,10 +7,10 @@
 			// Name of configuration; appears in the launch configuration drop down menu.
 			"name": "Launch Index.html URL",
 			// Type of configuration. Possible values: "node", "mono".
-			"type": "chrome",
+			"type": "chrome"
 			// Workspace relative or absolute path to the program.
 			//C"file": "http://1.0.0.57:3099/index.html"
-		},
+                },
         		{   "request": "launch",
 			// Name of configuration; appears in the launch configuration drop down menu.
 			"name": "Launch app.js",
