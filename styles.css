@@ -1,17 +1,17 @@
 h1 {
-  font-family: 'Bangers', cursive;;
-  font-weight: 700;
-  color: black;
-  text-shadow: 2px 1px 2px yellow;
+  font-family: 'Muli', sans-serif;;
+  font-weight: 400;
+  color: white !important;
+  text-shadow: 2px 1px 2px darkblue;
 }
 h2 {
-  font-family: 'Indie Flower', cursive;;
+  font-family: 'Cadal', san-serif;;
   color: yellow;
-  text-shadow: 2px 1px 2px black;
+  text-shadow: 2px 1px 2px white;
 }
 h3 {
-  font-family: 'Open Sans', sans-serif;;
-  font-weight: 700;
+  font-family: 'Iconsolata',;
+  font-weight: 400;
   color: yellow;
   text-shadow: 2px 1px 2px black;
 }
@@ -20,7 +20,7 @@ h3 {
     font-size: 76px;
   }
   h2 {
-    font-size: 66px;
+    font-size: 46px;
   }
   h3 {
     font-size: 36px;
@@ -31,7 +31,7 @@ h3 {
     font-size: 66px;
   }
   h2 {
-    font-size: 56px;
+    font-size: 36px;
   }
   h3 {
     font-size: 31px;
@@ -42,7 +42,7 @@ h3 {
     font-size: 56px;
   }
   h2 {
-    font-size: 46px;
+    font-size: 26px;
   }
   h3 {
     font-size: 26px;
@@ -53,7 +53,7 @@ h3 {
     font-size: 46px;
   }
   h2 {
-    font-size: 36px;
+    font-size: 16px;
   }
   h3 {
     font-size: 21px;
@@ -64,17 +64,17 @@ h3 {
     font-size: 36px;
   }
   h2 {
-    font-size: 26px;
+    font-size: 6px;
   }
   h3 {
     font-size: 16px;
   }
 }
 p {
-  font-family: 'Open Sans', sans-serif;;
+  font-family: 'Iconsolata',;
   font-weight: 600;
   font-size: 24px;
-  color: black;
+  color: darkblue;
 }
 .navbar {
   background-color: #E7E7E7;
@@ -89,15 +89,15 @@ p {
   background-color: lightgrey;
 }
 .navbar-brand {
-  font-family: 'Bangers', cursive;;
-  color: black !important;
+  font-family: 'Muli', sans-serif;;
+  color: #66A3DE !important;
 }
 .navbar-brand:hover {
   color: yellow !important;
 }
 ul.nav li a {
-  font-family: 'Indie Flower', cursive;;
-  color: black !important;
+  font-family: 'Cadal', san-serif;;
+  color: #66A3DE !important;
 }
 ul.nav li a:hover {
   color: yellow !important;
@@ -107,10 +107,10 @@ ul.nav li a:hover {
   padding-top: 25px;
 }
 .footer a {
-  font-family: 'Indie Flower', cursive;;
+  font-family: 'Cadal', san-serif;;
   padding-right: 10px;
   padding-left: 10px;
-  color: black;
+  color: #66A3DE;
   margin-top: 25px;
 }
 .footer a:hover {
@@ -118,14 +118,16 @@ ul.nav li a:hover {
   text-decoration: none;
 }
 #footer {
-  font-family: 'Bangers', cursive;;
+  font-family: 'Muli', sans-serif;;
   padding-top: 15px;
   padding-left: 10px;
   font-size: 10px;
-  color: black;
+  color: #66A3DE;
 }
 .jumbotron {
-  margin-bottom: 5px;
+  background-image: url("http://i.imgur.com/RwjSBao.png");
+  background-position: center;
+  background-repeat: no-repeat;
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;

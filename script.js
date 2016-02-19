@@ -39,8 +39,7 @@ url += 'q=Baltimore&units=imperial&APPID=988a7511aee3e85975c21e95a0db698e';
 
 console.log('Get Data Call');
 
-$.get(url,
-    function (response) {
+$.get(url, function (response) {
 
         console.log(response);
 
@@ -48,7 +47,7 @@ $.get(url,
         I'm only doing this here to show what the string looks like.*/
 
         // show the raw json
-        $('#raw_json pre').text(JSON.stringify(response));
+        $('#raw_json_pre').text(JSON.stringify(response));
 
         /* Working with the 'response' object (not string) here, now we can access the different properties available.
         (Look at jsoneditoronline.org to see the structure of the properties.) */
