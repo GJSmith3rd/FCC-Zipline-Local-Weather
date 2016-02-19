@@ -9,7 +9,7 @@
 			// Type of configuration. Possible values: "node", "mono".
 			"type": "chrome",
 			// Workspace relative or absolute path to the program.
-			//"file": "http://1.0.0.57:3099/index.html"
+			//C"file": "http://1.0.0.57:3099/index.html"
 		},
         		{   "request": "launch",
 			// Name of configuration; appears in the launch configuration drop down menu.
