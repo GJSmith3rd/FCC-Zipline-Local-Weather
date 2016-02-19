@@ -3,19 +3,27 @@
 	// List of configurations. Add new configurations or edit existing ones.
 	// ONLY "node" and "mono" are supported, change "type" to switch.
 	"configurations": [
-		{
+		{   "request": "launch",
+			// Name of configuration; appears in the launch configuration drop down menu.
+			"name": "Launch Index.html URL",
+			// Type of configuration. Possible values: "node", "mono".
+			"type": "chrome",
+			// Workspace relative or absolute path to the program.
+			"file": "index.html"
+		},
+        		{   "request": "launch",
 			// Name of configuration; appears in the launch configuration drop down menu.
 			"name": "Launch app.js",
 			// Type of configuration. Possible values: "node", "mono".
 			"type": "node",
 			// Workspace relative or absolute path to the program.
-			"program": "app.js",
+			"program": "${workspaceroot}app",
 			// Automatically stop program after launch.
 			"stopOnEntry": false,
 			// Command line arguments passed to the program.
 			"args": [],
 			// Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.
-			"cwd": ".",
+			"cwd": "${workspaceroot}",
 			// Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.
 			"runtimeExecutable": null,
 			// Optional arguments passed to the runtime executable.
@@ -28,6 +36,7 @@
 			"outDir": null
 		},
 		{
+            "request": "attach",
 			"name": "Attach",
 			"type": "node",
 			// TCP/IP address. Default is "localhost".
