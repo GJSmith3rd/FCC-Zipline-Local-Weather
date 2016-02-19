@@ -1,24 +1,24 @@
-//@import url(@import url(https://fonts.googleapis.com/css?family=Bangers|Indie+Flower);
+//@import url(https://fonts.googleapis.com/css?family=Muli:400,400italic,300italic,300|Candal|Inconsolata:400,700);
 
-@mainFont: ~"'Bangers', cursive;";
-@accentFont: ~"'Indie Flower', cursive;";
-@textFont: ~"'Open Sans', sans-serif;";
+@mainFont: ~"'Muli', sans-serif;";
+@accentFont: ~"'Cadal', san-serif;";
+@textFont: ~"'Iconsolata',";
 
-@h1Color: black;
-@h1ShadowColor: yellow;
+@h1Color: white;
+@h1ShadowColor: darkblue;
 
 @h2Color: yellow;
-@h2ShadowColor: black;
+@h2ShadowColor: white;
 
 @h3Color: yellow;
 @h3ShadowColor: black;
 
-@navColor: black;
+@navColor: #66A3DE;
 @navColorHover: yellow;
 @navBackgroundColor: #E7E7E7;
 @navBackgroundColorHover: lightgrey;
 
-@textColor: black;
+@textColor: darkblue;
 @textShadowColor: yellow;
 
 @shadowColor: darkgrey;
@@ -33,7 +33,7 @@
 @h1-font-size--small: @h1-font-size--medium - 10;
 @h1-font-size--xsmall: @h1-font-size--small - 10;
 
-@h2-font-size--xlarge: 66px;
+@h2-font-size--xlarge: 46px;
 @h2-font-size--large: @h2-font-size--xlarge - 10;
 @h2-font-size--medium: @h2-font-size--large - 10;
 @h2-font-size--small: @h2-font-size--medium - 10;
@@ -61,8 +61,8 @@
 
 h1 {
 	font-family: @mainFont;
-	font-weight: 700;
-	color: @h1Color;
+	font-weight: 400;
+	color: @h1Color !important;
 	text-shadow: 2px 1px 2px @h1ShadowColor;
 }
 h2 {
@@ -72,7 +72,7 @@ h2 {
 }
 h3 {
 	font-family: @textFont;
-	font-weight: 700;
+	font-weight: 400;
 	color: @h3Color;
 	text-shadow: 2px 1px 2px @h3ShadowColor;
 }
@@ -187,8 +187,11 @@ ul.nav li a {
 
 }
 .jumbotron {
+  background-image: url("http://i.imgur.com/RwjSBao.png");
+  background-position: center;
+  background-repeat: no-repeat;
   //margin-top: 55px;
-  margin-bottom: 5px;
+  //margin-bottom: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
