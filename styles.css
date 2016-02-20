@@ -131,9 +131,7 @@ ul.nav li a:hover {
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
-}
-img {
-  border-radius: 5px;
+  height: 750px;
 }
 #timeline {
   padding-left: 20px;
