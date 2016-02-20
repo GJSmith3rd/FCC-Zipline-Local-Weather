@@ -10,9 +10,7 @@ $(document).ready(function () {
     url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Baltimore&';
 
     getWeatherData(url);
-    populateHtml(response);
 
-    var response;
     console.log('***Document Ready');
 
     if (navigator.geolocation) {
@@ -29,7 +27,6 @@ $(document).ready(function () {
             url += '&units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&';
 
             getWeatherData(url);
-            populateHtml(response);
 
         }, function (error) {
 
@@ -39,7 +36,6 @@ $(document).ready(function () {
             url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Baltimore&';
 
             getWeatherData(url);
-            populateHtml(response);
 
         });
 
@@ -47,11 +43,10 @@ $(document).ready(function () {
 
         console.log('***Get Data Manual');
 
-        var url = 'http://api.openweathermap.org/data/2.5/weather?';
+        url = 'http://api.openweathermap.org/data/2.5/weather?';
         url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Baltimore&';
 
         getWeatherData(url);
-        populateHtml(response);
 
     }
 
@@ -59,22 +54,19 @@ $(document).ready(function () {
     function getWeatherData(url) {
         console.log('***Get Data Function');
 
-        $.get(url, function (response) {
+        $.get(url, function (res) {
 
-            // console.log(response);
-            $('#weatherDataRaw').text(JSON.stringify(response));
+            $('#weatherLocation').text(prep(res.name) + ' Weather');
+
+            $('#weatherDataRaw').text(JSON.stringify(res));
 
         });
 
-    }
+        function prep(data) {
 
-    /*** GET POPULATE HTML ***/
-    function populateHtml(response) {
-        console.log('***Populate Data function');
+            return JSON.stringify(data).replace(/["]/g, '');
 
-        //console.log(response);
-
-        //$('#weatherDataRaw').text(JSON.stringify(response));
+        }
 
     }
 
