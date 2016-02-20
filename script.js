@@ -56,7 +56,20 @@ $(document).ready(function () {
 
         $.get(url, function (res) {
 
-            $('#weatherLocation').text(prep(res.name) + ' Weather');
+            $('#weatherLocation').text(prep(res.name) +
+            ',' + prep(res.sys.country) +
+                ' Weather');
+
+            $('#weatherIcon').attr('src', 'http://openweathermap.org/img/w/' +
+                prep(res.weather[0].icon) + '.png');
+
+            $('#weatherCurrent').text((
+                prep(res.weather[0].main) +
+                ' ' +
+                prep(res.main.temp) +
+                ' F'));
+
+            $('#weatherDesc').text(prep(res.weather[0].description));
 
             $('#weatherDataRaw').text(JSON.stringify(res));
 
