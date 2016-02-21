@@ -4,6 +4,16 @@
         // ONLY "node" and "mono" are supported, change "type" to switch.
         "configurations": [
                 {
+                        "request": "attach",
+                        "name": "Attach Node",
+                        "type": "node",
+                        // TCP/IP address. Default is "localhost".
+                        "address": "localhost",
+                        // Port to attach to.
+                        "port": 9222,
+                        "sourceMaps": false
+                },
+                {
                         "request": "launch",
                         // Name of configuration; appears in the launch configuration drop down menu.
                         "name": "Remote Debug",
@@ -40,14 +50,18 @@
                         "outDir": null
                 },
                 {
+                        "name": "Attach Chrome",
+                        "type": "chrome",
                         "request": "attach",
-                        "name": "Attach",
-                        "type": "node",
-                        // TCP/IP address. Default is "localhost".
-                        "address": "localhost",
-                        // Port to attach to.
-                        "port": 5858,
-                        "sourceMaps": false
+                        "port": 9222
+                },
+                {
+                        "name": "Attach to url with files served from ./out",
+                        "type": "chrome",
+                        "request": "attach",
+                        "port": 9222,
+                        "webRoot": "out"
                 }
+
         ]
 }
