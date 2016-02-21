@@ -64,10 +64,10 @@ $(document).ready(function () {
                 ',' + prep(res.sys.country) +
                 ' Weather');
 
-            $('#weatherCurrent').text((
+            $('#weatherCurrent').text(
                 prep(res.weather[0].main) +
                 ' ' +
-                roundFahrenheit()));
+                roundFahrenheit() + ' F');
 
             $('#weatherIcon').attr('src', 'http://openweathermap.org/img/w/' +
                 prep(res.weather[0].icon) + '.png');
@@ -89,13 +89,13 @@ $(document).ready(function () {
             $('#weatherCurrent').text(
                 prep(response.weather[0].main) +
                 ' ' +
-                roundFahrenheit());
+                roundFahrenheit() + ' F');
 
         } else if ($('input[name=tempButton]:checked', '#myForm').val() === 'Celcius') {
 
             $('#weatherCurrent').text((response.weather[0].main) +
                 ' ' +
-                convertCelcius());
+                convertCelcius() + ' C');
 
         }
 
