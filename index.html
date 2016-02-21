@@ -149,19 +149,48 @@
         <h2 id="weatherCurrent"></h2>
         <p id="weatherDesc"></p>
 
+        <div class="row center">
+
+          <div class="col-sm-4"></div>
+
+          <form id="myForm">
+            <div id="radioButtons" class="col-sm-4">
+              <div class="btn-group btn-group-sm" data-toggle="buttons">
+
+                <label class="btn btn-default">
+                  <input type="radio" id="celcius" name="tempButton" value="Celcius" /> C
+                </label>
+
+                <label class="btn btn-default active">
+                  <input type="radio" id="fahrenheit" name="tempButton" checked="checked" value="Fahrenheit" /> F
+                </label>
+
+              </div>
+            </div>
+          </form>
+
+          <div class="col-sm-4"></div>
+
+        </div>
+
+
+        <p id="weatherDesc"></p>
+
       </div>
 
       <div>
 
         <div>
-          <p id="weatherDataRaw">TEXT</p>
+          <p id="weatherDataRaw1">TEXT</p>
         </div>
+        <div>
+          <p id="weatherDataRaw2">TEXT</p>
+        </div>
+        <h3>OpenWeatherMap</h3>
 
-        <h3>OpenWeatherMap</h2>
+      </div>
 
     </div>
-
-  </div>
   </div>
   <!--/.jumbotron text-center -->
   <!--/.jumbotron -->
@@ -177,34 +206,34 @@
       <a href="http://mobilecreature.github.io/#" target="_blank">
         <span class="glyphicon glyphicon-home" aria-hidden="true">
         </span>
-    </a>
-    <span>&#8226;</span>
-    <a href="http://mobilecreature.github.io/#about" target="_blank">
-      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-    </a>
-    <span>&#8226;</span>
-    <a href="http://mobilecreature.github.io/#portfolio" target="_blank">
-      <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-    </a>
-    <span>&#8226;</span>
-    <a href="http://mobilecreature.github.io/#contact" target="_blank">
-      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-    </a>
+      </a>
+      <span>&#8226;</span>
+      <a href="http://mobilecreature.github.io/#about" target="_blank">
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      </a>
+      <span>&#8226;</span>
+      <a href="http://mobilecreature.github.io/#portfolio" target="_blank">
+        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+      </a>
+      <span>&#8226;</span>
+      <a href="http://mobilecreature.github.io/#contact" target="_blank">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+      </a>
 
-  </div>
-  <!--end FOOTER nav-->
+    </div>
+    <!--end FOOTER nav-->
 
-  <!--begin FOOTER copyright-->
-  <div>
+    <!--begin FOOTER copyright-->
+    <div>
 
-    <p id="footer">Copyright © mobileCreature 2015 -
-      <script>
-        document.write(new Date().getFullYear());
-      </script>. All Rights Reserved.
-    </p>
+      <p id="footer">Copyright © mobileCreature 2015 -
+        <script>
+          document.write(new Date().getFullYear());
+        </script>. All Rights Reserved.
+      </p>
 
-  </div>
-  <!--end FOOTER copyright-->
+    </div>
+    <!--end FOOTER copyright-->
 
   </div>
   <!--end FOOTER container-->
