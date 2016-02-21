@@ -1,15 +1,13 @@
 /* global $ */
 
-console.log('Document Load');
-
 $(document).ready(function () {
 
     var response;
 
-    console.log('***Get Data Before Geo');
+    /*** Get Data Before Geo') ***/
 
     var url = 'http://api.openweathermap.org/data/2.5/weather?';
-    url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Baltimore&';
+    url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Paris&';
 
     getWeatherData(url);
 
@@ -32,23 +30,14 @@ $(document).ready(function () {
 
         }, function (error) {
 
-            console.log('***Get Data Manual');
+            /*** MAYBE - CATCH ERROR ***/
 
             var url = 'http://api.openweathermap.org/data/2.5/weather?';
-            url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Baltimore&';
+            url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Paris&';
 
             getWeatherData(url);
 
         });
-
-    } else {
-
-        console.log('***Get Data Manual');
-
-        url = 'http://api.openweathermap.org/data/2.5/weather?';
-        url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Baltimore&';
-
-        getWeatherData(url);
 
     }
 
@@ -74,14 +63,14 @@ $(document).ready(function () {
 
             $('#weatherDesc').text(prep(res.weather[0].description));
 
-            $('#weatherDataRaw1').text(JSON.stringify(res));
-            $('#weatherDataRaw2').text(JSON.stringify(response));
+            /*** FOR DEBUGGING ***/
+            //$('#weatherDataRaw1').text(JSON.stringify(res));
 
         });
 
     }
 
-    /*** RADIO BUTTON TOGGLE F/C ***/
+    /*** RADIO BUTTON TEMP TOGGLE  ***/
     $('#radioButtons').on('change', function () {
 
         if ($('input[name=tempButton]:checked', '#myForm').val() === 'Fahrenheit') {
