@@ -3,6 +3,7 @@
 $(document).ready(function () {
 
     var response;
+    var APPID = 'APPID=988a7511aee3e85975c21e95a0db698e';
 
     /*** Get Data Before Geo') ***/
 
@@ -24,7 +25,8 @@ $(document).ready(function () {
             var url = 'http://api.openweathermap.org/data/2.5/weather?';
             url += 'lat=' + lat;
             url += '&lon=' + lon;
-            url += '&units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&';
+            url += '&units=imperial&';
+            url += APPID;
 
             getWeatherData(url);
 
@@ -33,38 +35,10 @@ $(document).ready(function () {
             /*** MAYBE - CATCH ERROR ***/
 
             var url = 'http://api.openweathermap.org/data/2.5/weather?';
-            url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Paris&';
+            url += 'units=imperial&=Paris&';
+            url += APPID;
 
             getWeatherData(url);
-
-        });
-
-    }
-
-    /*** GET WEATHER FUNCTION ***/
-    function getWeatherData(url) {
-        console.log('***Get Data Function');
-
-        $.get(url, function (res) {
-
-            response = res;
-
-            $('#weatherLocation').text(prep(res.name) +
-                ',' + prep(res.sys.country) +
-                ' Weather');
-
-            $('#weatherCurrent').text(
-                prep(res.weather[0].main) +
-                ' ' +
-                roundFahrenheit() + ' F');
-
-            $('#weatherIcon').attr('src', 'http://openweathermap.org/img/w/' +
-                prep(res.weather[0].icon) + '.png');
-
-            $('#weatherDesc').text(prep(res.weather[0].description));
-
-            /*** FOR DEBUGGING ***/
-            //$('#weatherDataRaw1').text(JSON.stringify(res));
 
         });
 
@@ -89,6 +63,36 @@ $(document).ready(function () {
         }
 
     });
+
+    /*** GET WEATHER FUNCTION ***/
+    function getWeatherData(url) {
+        console.log('***Get Data Function');
+
+        $.get(url, function (res) {
+
+            response = res;
+            console.log(response);
+
+            $('#weatherLocation').text(prep(res.name) +
+                ',' + prep(res.sys.country) +
+                ' Weather');
+
+            $('#weatherCurrent').text(
+                prep(res.weather[0].main) +
+                ' ' +
+                roundFahrenheit() + ' F');
+
+            $('#weatherIcon').attr('src', 'http://openweathermap.org/img/w/' +
+                prep(res.weather[0].icon) + '.png');
+
+            $('#weatherDesc').text(prep(res.weather[0].description));
+
+            /*** FOR DEBUGGING ***/
+            //$('#weatherDataRaw1').text(JSON.stringify(res));
+
+        });
+
+    }
 
     /*** ROUND FAHRENHEIT ***/
     function roundFahrenheit() {
