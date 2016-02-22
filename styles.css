@@ -134,13 +134,3 @@ ul.nav li a:hover {
   padding-right: 10px;
   height: 750px;
 }
-#weatherIcon {
-  height: 100px;
-  width: 100px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-#timeline {
-  padding-left: 20px;
-  padding-right: 30px;
-}
