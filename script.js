@@ -2,9 +2,10 @@
 
 $(document).ready(function () {
 
-    var response;
-    var btoaId = valid();
     /*** Get Data Before Geo') ***/
+    var response;
+    var btoaId = validAtob();
+
     getDefaultLocation();
 
     console.log('***Document Ready');
@@ -123,11 +124,30 @@ $(document).ready(function () {
 
     }
 
+    /*** HIPV ***/
+    function validAtob() {
+
+        var hash = 'OTg4';
+
+        hash += 'YTc1';
+
+        hash += 'MTFh';
+        hash += 'ZWUz';
+
+        hash += 'ZTg1';
+        hash += 'OTc1';
+
+        hash += 'YzIx';
+        hash += 'ZTk1';
+
+        hash += 'YTBk';
+        hash += 'YjY5';
+
+        hash += 'OGU=';
+
+        return atob(hash);
+
+    }
+
 });
-
-function valid() {
-
-    return atob('OTg4YTc1MTFhZWUzZTg1OTc1YzIxZTk1YTBkYjY5OGU=');
-
-}
 
