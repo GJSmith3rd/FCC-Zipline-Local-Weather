@@ -8,7 +8,6 @@ FreeCodeCamp, Zipline Project, Local Weather.
 --------------------------------
 MobileCreature and Gilbert Smith portfolio site.
 
-A [CodePen](http://codepen.io/GJSmith3rd/pen/yeWVmG) and [FreeCodeCamp](http://freecodecamp.com/gjsmith3rd), Zipline Project - Local Weather, by [Gilbert Smith](http://codepen.io/GJSmith3rd) on [CodePen](http://codepen.io/).
+A [CodePen - Local Weather](http://codepen.io/GJSmith3rd/full/yeWVmG) and [GJSmith3rd - FreeCodeCamp](http://freecodecamp.com/gjsmith3rd), Zipline Project - Local Weather, by [Gilbert Smith](http://codepen.io/GJSmith3rd) on [CodePen](http://codepen.io/).
 
-[License](http://codepen.io/GJSmith3rd/pen/RWojRp).
-[FreeCodeCamp](http://freecodecamp.com/gjsmith3rd).
+[FreeCodeCamp](http://freecodecamp.com).
