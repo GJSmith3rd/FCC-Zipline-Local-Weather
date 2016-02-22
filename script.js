@@ -3,14 +3,9 @@
 $(document).ready(function () {
 
     var response;
-    var APPID = 'APPID=988a7511aee3e85975c21e95a0db698e';
-
+    var btoaId = valid();
     /*** Get Data Before Geo') ***/
-
-    var url = 'http://api.openweathermap.org/data/2.5/weather?';
-    url += 'units=imperial&APPID=988a7511aee3e85975c21e95a0db698e&q=Paris&';
-
-    getWeatherData(url);
+    getDefaultLocation();
 
     console.log('***Document Ready');
 
@@ -26,7 +21,7 @@ $(document).ready(function () {
             url += 'lat=' + lat;
             url += '&lon=' + lon;
             url += '&units=imperial&';
-            url += APPID;
+            url += 'APPID=' + btoaId;
 
             getWeatherData(url);
 
@@ -34,11 +29,7 @@ $(document).ready(function () {
 
             /*** MAYBE - CATCH ERROR ***/
 
-            var url = 'http://api.openweathermap.org/data/2.5/weather?';
-            url += 'units=imperial&=Paris&';
-            url += APPID;
-
-            getWeatherData(url);
+            getDefaultLocation();
 
         });
 
@@ -64,6 +55,18 @@ $(document).ready(function () {
 
     });
 
+    /*** GET DEFAULT LOCATION FUNCTION ***/
+    function getDefaultLocation() {
+
+        var url = 'http://api.openweathermap.org/data/2.5/weather?';
+        url += 'units=imperial&';
+        url += 'q=Paris&';
+        url += 'APPID=' + btoaId;
+
+        getWeatherData(url);
+
+    }
+
     /*** GET WEATHER FUNCTION ***/
     function getWeatherData(url) {
         console.log('***Get Data Function');
@@ -85,10 +88,11 @@ $(document).ready(function () {
             $('#weatherIcon').attr('src', 'http://openweathermap.org/img/w/' +
                 prep(res.weather[0].icon) + '.png');
 
-            $('#weatherDesc').text(prep(res.weather[0].description));
-
-            /*** FOR DEBUGGING ***/
-            //$('#weatherDataRaw1').text(JSON.stringify(res));
+            $('#weatherDesc').text(prep(res.weather[0].description) +
+                ' - wind ' +
+                prep(res.wind.speed) + ' mph ' +
+                ' - humidity ' +
+                prep(res.main.humidity) + '%');
 
         });
 
@@ -120,4 +124,10 @@ $(document).ready(function () {
     }
 
 });
+
+function valid() {
+
+    return atob('OTg4YTc1MTFhZWUzZTg1OTc1YzIxZTk1YTBkYjY5OGU=');
+
+}
 
