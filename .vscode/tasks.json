@@ -6,35 +6,34 @@
 // ${fileExtname}: the current opened file's extension
 // ${cwd}: the current working directory of the spawned process
 {
-    "version": "0.1.0",
-    "command": "gulp",
-    "isShellCommand": true,
-    "echoCommand": true,
-    "args": [
-        "--no-color"
-    ],
-    "tasks": [
-        {
-            "taskName": "--verbose",
-            "isBuildCommand": true,
-            "isTestCommand": false,
-            "showOutput": "always",
-            "echoCommand": true,
-            "args": [
-                "serve-build"
-            ]
-        },
-        {
-            "taskName": "--verbose",
-            "isBuildCommand": false,
-            "isTestCommand": true,
-            "showOutput": "always",
-            "echoCommand": true,
-            "args": [
-                "serve-dev"
-            ]
-        }
-    ]
+	"version": "0.1.0",
+	"command": "gulp",
+	"isShellCommand": true,
+	"args": [
+		"--no-color"
+	],
+	"tasks": [
+		{
+			"taskName": "--verbose",
+			"isBuildCommand": true,
+			"isTestCommand": false,
+			"showOutput": "always",
+			"echoCommand": true,
+			"args": [
+				"serve-build"
+			]
+		},
+		{
+			"taskName": "--verbose",
+			"isBuildCommand": false,
+			"isTestCommand": true,
+			"showOutput": "always",
+			"echoCommand": true,
+			"args": [
+				"serve-dev"
+			]
+		}
+	]
 }
 // A task runner that calls the Typescript compiler (tsc) and
 // Compiles a HelloWorld.ts program

@@ -1,4 +1,4 @@
-[Local Weather](http://s.codepen.io/GJSmith3rd/debug/yeWVmG)
+[Local Weather](http://s.codepen.io/GJSmith3rd/debug/yeWVmG) - hosted on CodePen.io
 --------------------------------
 ### A FreeCodeCamp project.
 
